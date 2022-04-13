@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <title>Old Stuff Changing</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="left">
+                    <a href="#"><img src="../images/logo.png"></a>
+                    <a href="#"> Home </a>
+                    <a href="#">About us</a>
+            </div>
+            <div class="right">
+                <input type="text" name="search" placeholder="Search...">
+                <a href="#"><img id="avatar" src="../images/avatar.png"></a>
+                <a href="#"><img src="../images/notification.png"></a>
+                <a href="#"><img src="../images/message.png"></a>
+                    
+                
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="slide">
+            <div class="image">
+            <img class="mySlides" src="../images/home_poster.png" alt="">
+            <img class="mySlides" src="../images/home_poster2.png" alt="">
+            <img class="mySlides" src="../images/home_poster3.png" alt="">
+            </div>
+            <div>
+                <button class="btn1" onclick="plusDivs(-1)">❮ Prev</button>
+                <button class="btn2" onclick="plusDivs(1)">Next ❯</button>
+            </div>
+            <button class="dot" onclick="currentDiv(1)">.</button>
+            <button class="dot" onclick="currentDiv(2)">.</button>
+            <button class="dot" onclick="currentDiv(3)">.</button>
+        </div>
+
+        <div class="categories">
+                <h2>Categories</h2>
+                <div class="category">
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                <div class="cate_detail">
+                    <img src="../images/category.png">
+                    <p>Cate1</p>
+                </div>
+                </div>
+        </div>
+        <div class="post">
+            <h2>NEW POSTS</h2>
+            <div class="cate_detail">
+                <img src="../images/home_newpost.png">
+            </div>
+            <div class="cate_detail">
+                <img src="../images/home_newpost.png">
+            </div><div class="cate_detail">
+                <img src="../images/home_newpost.png">
+            </div><div class="cate_detail">
+                <img src="../images/home_newpost.png">
+            </div><div class="cate_detail">
+                <img src="../images/home_newpost.png">
+            </div><div class="cate_detail">
+                <img src="../images/home_newpost.png">
+            </div><div class="cate_detail">
+                <img src="../images/home_newpost.png">
+            </div>
+            <a href="#">Watch more</a>
+        </div>
+
+    </div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("red", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += "red";
+    }
+</script>
+</body>
+
+</html>
